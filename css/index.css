@@ -197,14 +197,16 @@ img {
   font-size: 1.6rem;
   padding: 20px;
 }
-.home .dashed-line {
-  border-bottom: dashed 1px lightgrey;
-  border-width: medium;
-  width: 120%;
-  margin: 0 0 0 -10%;
+.home .dashed-line-top {
+  border-bottom: dashed 2px lightgrey;
+  margin: 0 -10% 0 -10%;
+}
+.home .dashed-line-bot {
+  border-bottom: dashed 2px lightgrey;
 }
 .home .toy-bus {
   width: 100%;
+  margin-bottom: 1.5rem;
 }
 .home .content-section {
   margin: 30px 0;
@@ -251,4 +253,13 @@ img {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+.home .content-pick .btn {
+  width: 90%;
+  background-color: #008080;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-align: center;
 }

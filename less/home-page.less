@@ -1,14 +1,17 @@
 .home {
 
-  .dashed-line {
-    border-bottom: dashed 1px lightgrey;
-    border-width: medium;
-    width: 120%;
-    margin: 0 0 0 -10%;
+  .dashed-line-top {
+    .dashes(dashed; 2px; lightgrey);
+    margin: 0 -10% 0 -10%;
+  }
+
+  .dashed-line-bot {
+    .dashes(dashed; 2px; lightgrey);
   }
 
   .toy-bus {
     width: 100%;
+    margin-bottom: 1.5rem;
   }
 
   .content-section {
@@ -67,6 +70,14 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+    }
+
+    .btn {
+      .action-btn(90%, #008080, 2rem);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      text-align: center;
     }
   }
 }// home
