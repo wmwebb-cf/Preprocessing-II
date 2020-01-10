@@ -1,27 +1,38 @@
 // Navigation Styles here
-// Parametric mixins
-
-
 
 .nav-bar {
   display: flex;
-  flex-wrap: wrap;
   padding-top: 2rem;
+  padding-bottom: 1.2rem;
+  .dashes(dashed; 2px; @navigation-border);
+  // margin: 0 -10% 0 -10%;
+
+  @media @mobile {
+    flex-direction: column;
+  }
 
   .company-name {
     width: 60%;
+    @media @mobile {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   .menu {
     width: 40%;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      width: 90%;
+      justify-content: space-around;
+    }
 
-      .item {
-        text-decoration: none;
-        color: black;
-        font-size: 2rem;
-      }
+    .item {
+      text-decoration: none;
+      color: @font-color;
+      font-size: 2rem;
+    }
   }
 
 }

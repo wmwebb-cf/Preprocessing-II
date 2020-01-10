@@ -1,35 +1,48 @@
 .home {
 
-  .dashed-line-top {
-    .dashes(dashed; 2px; lightgrey);
-    margin: 0 -10% 0 -10%;
-  }
 
-  .dashed-line-bot {
-    .dashes(dashed; 2px; lightgrey);
-  }
+  .billboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  .toy-bus {
-    width: 100%;
-    margin-bottom: 1.5rem;
+    .toy-bus, .bb-content {
+      width: 90%;
+      margin-bottom: 1.5rem;
+    }
+    .bb-content {
+      .dashes(dashed; 2px; @navigation-border);
+    }
+
   }
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
-
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+    }
 
     .text-content {
-      width: 48%;
+      width: 44%;
       padding-right: 1%;
+      @media @mobile {
+        width: 90%;
+        margin-bottom: 1.5rem;
+      }
     }
 
     .img-content {
-      width: 48%;
+      width: 44%;
       padding-left: 1%;
+      @media @mobile {
+        width: 90%;
+        margin-bottom: 1.5rem;
+      }
 
       img {
         border-radius: 10px;
@@ -39,16 +52,27 @@
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    .dashes(dashed; 2px; @navigation-border);
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @mobile {
+        width: 90%;
+        margin-bottom: 1.5rem;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile {
+        width: 90%;
+        margin-bottom: 1.5rem;
+      }
     }
   }
 
@@ -66,18 +90,27 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        width: 80%;
+      }
     }
 
     .btn {
-      .action-btn(90%, #008080, 2rem);
-      color: white;
+      .action-btn(90%, @button-bg, 2rem);
+      color: @white;
       padding: 1rem 2rem;
       border-radius: 10px;
       text-align: center;
+      margin-bottom: 2.5rem;
     }
   }
+
 }// home
